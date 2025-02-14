@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Art - NeuroCanvas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <style>
+    body { display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+    canvas { border: 2px solid #00ff9d; box-shadow: 0 0 15px #00ff9d55; background: #0f172a; }
+    .controls { margin: 1rem; }
+  </style>
+</head>
+<body>
+  <h1 class="text-white">Interactive Art Canvas</h1>
+  <canvas id="liveCanvas" width="800" height="600"></canvas>
+  <div class="controls">
+    <button onclick="clearCanvas()">Clear Canvas</button>
+    <button onclick="saveCanvas()">Save Art</button>
+  </div>
+  <a class="btn" href="{{ url_for('gallery') }}">Back to Gallery</a>
+  <script src="{{ url_for('static', filename='js/interactive-art.js') }}"></script>
+</body>
+</html>

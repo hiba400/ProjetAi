@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ "Audio Lab" if audio_lab else "Image Lab" }} - NeuroCanvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Intégration de Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 min-h-screen">
+  <!-- Barre de navigation identique aux autres pages -->
+  <nav class="bg-black/50 backdrop-blur-lg fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+        NeuroCanvas
+      </a>
+      <div class="space-x-6">
+        <a href="/gallery" class="text-gray-300 hover:text-white transition">Gallery</a>
+        <a href="/data-viz" class="text-gray-300 hover:text-white transition">DataViz</a>
+        <a href="/image-lab" class="text-gray-300 hover:text-white transition">ImageLab</a>
+        <a href="/interactive-art" class="text-gray-300 hover:text-white transition">Interactive Art</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-6 pt-32">
+    <header class="text-center py-6">
+      <h1 class="text-4xl font-bold">{{ "Audio Lab" if audio_lab else "Image Lab" }}</h1>
+      <p class="text-gray-300 mt-2">
+        {{ "Téléchargez un fichier audio pour appliquer des effets." if audio_lab else "Téléchargez une image pour appliquer un effet glitch." }}
+      </p>
+    </header>
+
+    {% if audio_lab %}
+    <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <form id="audioForm" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <input type="file" name="audio" id="audioInput" accept="audio/*" required
+               class="w-full p-2 bg-gray-700 text-white rounded">
+        <select name="effect" class="w-full p-2 bg-gray-700 text-white rounded">
+          <option value="reverse">Inverser l'audio</option>
+          <option value="speedup">Accélérer l'audio</option>
+        </select>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+          Appliquer l'effet audio
+        </button>
+      </form>
+      <div class="mt-4">
+        <audio controls id="processedAudio" class="w-full"></audio>
+      </div>
+    </div>
+    {% else %}
+    <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <form id="imageForm" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <input type="file" name="image" id="imageInput" accept="image/*" required
+               class="w-full p-2 bg-gray-700 text-white rounded">
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+          Appliquer l'effet glitch
+        </button>
+      </form>
+      <div class="mt-4">
+        <img id="originalImage" src="#" alt="Image Originale" class="w-full rounded hidden">
+        <img id="processedImage" src="#" alt="Image Traitée" class="w-full rounded mt-4">
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="mt-6 text-center">
+      <a class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full"
+         href="{{ url_for('gallery') }}">
+        Retour à la Gallery
+      </a>
+    </div>
+  </main>
+
+  {% if audio_lab %}
+  <script>
+    document.getElementById('audioForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const response = await fetch('/process/audio', { method: 'POST', body: formData });
+      const result = await response.json();
+      if (result.processedUrl) {
+        document.getElementById('processedAudio').src = result.processedUrl;
+      }
+    });
+  </script>
+  {% else %}
+  <script src="{{ url_for('static', filename='js/image-lab.js') }}"></script>
+  {% endif %}
+</body>
+</html>

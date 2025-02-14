@@ -1,0 +1,26 @@
+body {
+    background: #0f172a;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar, .btn {
+    /* Additional custom styling if needed */
+  }
+  
+  .art-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .art-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .neon-border {
+    border: 2px solid #00ff9d;
+    box-shadow: 0 0 15px #00ff9d55;
+  }
+  

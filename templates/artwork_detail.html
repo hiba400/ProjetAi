@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artwork Detail - NeuroCanvas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="text-center py-6">
+    <h1>Artwork Detail</h1>
+  </header>
+  <main class="container mx-auto px-6">
+    {% if image %}
+    <div class="art-detail text-center">
+      <img src="{{ image }}" alt="Artwork Detail">
+    </div>
+    {% else %}
+    <p>No artwork available.</p>
+    {% endif %}
+    <a class="btn" href="{{ url_for('gallery') }}">Back to Gallery</a>
+  </main>
+</body>
+</html>
