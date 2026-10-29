@@ -1,5 +1,18 @@
 
-# Application Screenshots
+## Application Screenshots
 
-Screenshots of the NeuroCanvas application, including the homepage, generative art gallery, interactive canvas, image processing, and data visualization.
-      
+### Homepage
+![NeuroCanvas Homepage](screenshots/homepage.png)
+
+### Generative Art Gallery
+![Generative Art Gallery](screenshots/gallery.png)
+
+### Interactive Art Canvas
+![Interactive Art Canvas](screenshots/interactive-canvas.png)
+
+### Image Lab
+![Image Lab](screenshots/image-lab.png)
+
+### Data Visualization
+![Weather Data Visualization](screenshots/data-visualization.png)
+  
