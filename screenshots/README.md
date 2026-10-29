@@ -1,17 +1,17 @@
-## Application Screenshots
 
-### Homepage
-![NeuroCanvas Homepage](screenshots/homepage.png)
+# Application Screenshots
 
-### Generative Art Gallery
-![Generative Art Gallery](screenshots/gallery.png)
+## Homepage
+![NeuroCanvas Homepage](homepage.png)
 
-### Interactive Art Canvas
-![Interactive Art Canvas](screenshots/interactive-canvas.png)
+## Generative Art Gallery
+![Generative Art Gallery](gallery.png)
 
-### Image Lab
-![Image Lab](screenshots/image-lab.png)
+## Interactive Art Canvas
+![Interactive Art Canvas](interactive-canvas.png)
 
-### Data Visualization
-![Weather Data Visualization](screenshots/data-visualization.png)
-  
+## Image Lab
+![Image Lab](image-lab.png)
+
+## Data Visualization
+![Weather Data Visualization](data-visualization.png)
