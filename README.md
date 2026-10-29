@@ -57,6 +57,23 @@ ProjetAi/
 └── rapport.pdf
 ```
 
+## Application Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+
+### Generative Art Gallery
+![Gallery](screenshots/gallery.png)
+
+### Interactive Art Canvas
+![Interactive Canvas](screenshots/interactive-canvas.png)
+
+### Image Lab
+![Image Lab](screenshots/image-lab.png)
+
+### Data Visualization
+![Data Visualization](screenshots/data-visualization.png)
+
 ## Installation
 
 **1. Clone the repository**
