@@ -1,114 +1,135 @@
 # Interactive Generative Art Gallery
 
-Welcome to the **Interactive Generative Art Gallery** – a creative web application that showcases generative art, data visualizations, and interactive tools for manipulating images and art. This project demonstrates how to combine Python, Flask, and various libraries to build an engaging digital art gallery.
+### Python | Flask | Generative Art | Data Visualization | Image Processing
+
+An interactive web application combining creative programming, image processing and data visualization to explore the intersection of art and technology.
 
 ## Project Overview
 
-The Interactive Generative Art Gallery features:
+This project provides a digital gallery where users can explore generative artworks, interact with a drawing canvas, visualize data and manipulate uploaded images.
 
-- **Generative Art Pieces:** Randomly generated artworks created using Python's object-oriented programming, loops, and conditionals.
-- **Data-Driven Visualizations:** Creative visual representations of data (e.g., weather data) using Matplotlib and Pandas.
-- **Image Manipulation:** A tool (Image Lab) that allows users to upload images and apply a glitch effect.
-- **Interactive Art Canvas:** An HTML5 canvas where users can click to generate colorful, random shapes.
-- **(Optional) Audio Manipulation & Machine Learning:** Additional features can include audio processing (with PyDub) and bonus ML features (e.g., art caption generation or style transfer).
+It combines Python programming with a Flask web application and an interactive frontend.
 
-## Features
+## Main Features
 
-- **Generative Art Engine:** Uses a custom `NeuroCanvas` class to create cyberpunk-style artwork.
-- **Data Visualization:** Displays creative data visualizations with Matplotlib.
-- **Image Lab:** Allows users to upload an image and apply a glitch effect using Pillow.
-- **Interactive Canvas:** Lets users draw by clicking on a canvas, which generates random colored circles.
-- **Responsive Web Design:** All pages include inline CSS for a consistent look and feel.
-- **Flask Web App:** Hosts all these interactive features and serves as the project's backend.
+**1. Generative Art Engine**
+- Generate cyberpunk-inspired artworks using the `NeuroCanvas` class.
+- Apply object-oriented programming and procedural generation techniques.
 
-## Installation
+**2. Data Visualization**
+- Generate visual representations of datasets.
+- Use Matplotlib and Pandas for data processing and visualization.
 
-### Prerequisites
+**3. Image Lab**
+- Upload images through the application.
+- Apply glitch-style visual effects using Pillow.
 
-- **Python 3.7+**  
-- **Git** (optional, for cloning the repository)
+**4. Interactive Art Canvas**
+- Interact with an HTML5 canvas.
+- Generate random colored shapes through user interactions.
 
-### Setup Instructions
+**5. Web Interface**
+- Flask backend.
+- HTML, CSS and JavaScript frontend.
+- Multiple pages for the gallery, image manipulation and interactive artwork.
 
-1. **Clone the Repository or Download the ZIP:**
-   ```bash
-   git clone https://github.com/yourusername/interactive-generative-art-gallery.git
-   cd interactive-generative-art-gallery
-   ```
+## Technologies
 
-2. **Create a Virtual Environment:**
-   ```bash
-   python -m venv venv
-   ```
-
-3. **Activate the Virtual Environment:**
-   - On **Windows:**
-     ```bash
-     venv\Scripts\activate.bat
-     ```
-   - On **macOS/Linux:**
-     ```bash
-     source venv/bin/activate
-     ```
-
-4. **Install Dependencies:**
-   ```bash
-   pip install flask pillow matplotlib pandas numpy
-   ```
-   For audio processing (optional):
-   ```bash
-   pip install pydub
-   ```
-   > **Note:** For audio processing, ensure you have [FFmpeg](https://ffmpeg.org/) installed on your system.
-
-## Running the Application
-
-1. **Ensure your virtual environment is activated.**
-2. **Run the Flask application:**
-   ```bash
-   python app.py
-   ```
-3. **Open your browser and navigate to:**
-   ```
-   http://127.0.0.1:5000
-   ```
+| Category | Technologies |
+|---|---|
+| Backend | Python, Flask |
+| Frontend | HTML, CSS, JavaScript |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib |
+| Image Processing | Pillow |
+| Development | Git, GitHub |
 
 ## Project Structure
 
-```
-interactive-generative-art-gallery/
+```text
+ProjetAi/
 ├── app.py
+├── data/
 ├── static/
-│   └── js/
-│       ├── app.js
-│       ├── image-lab.js
-│       └── interactive-art.js
-│   └── uploads/         # For uploaded images and audio files
-└── templates/
-    ├── index.html
-    ├── gallery.html
-    ├── image-lab.html
-    ├── interactive-art.html
-    └── artwork_detail.html
+├── templates/
+├── README.md
+├── demonstration.mp4
+└── rapport.pdf
 ```
 
-## Troubleshooting
+## Installation
 
-- **Template Not Found Error:** Ensure all HTML template files are in the `templates/` folder and named correctly.
-- **Cyberpunk Art Generation Error:** Verify that `self._draw_data_stream(color)` call is removed from `generate_cyberpunk()` method.
-- **404 Errors for Static Files:** Check directory structure and route configurations.
-- **Virtual Environment Issues:** Confirm proper virtual environment activation before installing dependencies.
+**1. Clone the repository**
 
-## Future Enhancements
+```bash
+git clone https://github.com/hiba400/ProjetAi.git
+cd ProjetAi
+```
 
-- **Audio Processing:** Add advanced audio manipulation using PyDub and additional filters.
-- **Machine Learning:** Integrate style transfer or art caption generation using TensorFlow or PyTorch.
-- **User Interaction:** Implement user authentication, saved galleries, and interactive art customization tools.
+**2. Create a virtual environment**
 
-## License
+```bash
+python -m venv venv
+```
 
-This project is for educational purposes. Feel free to modify and improve it for your own use.
+**3. Activate the environment**
 
----
+Windows:
 
-Enjoy exploring the intersection of art and technology with the Interactive Generative Art Gallery!
+```bash
+venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+**4. Install dependencies**
+
+```bash
+pip install flask pillow matplotlib pandas numpy
+```
+
+**5. Run the application**
+
+```bash
+python app.py
+```
+
+Open your browser at:
+
+`http://127.0.0.1:5000`
+
+## Demonstration
+
+The repository includes a video demonstration of the application.
+
+[View Demonstration](https://github.com/hiba400/ProjetAi/blob/main/demonstration.mp4)
+
+## Project Report
+
+A technical report describing the application and its development is available in the repository.
+
+[View Project Report](https://github.com/hiba400/ProjetAi/blob/main/rapport.pdf)
+
+## Future Improvements
+
+- Integrate Machine Learning for image classification or artistic style transfer.
+- Explore AI-generated artwork descriptions.
+- Add user authentication.
+- Enable users to save and organize their generated artworks.
+- Improve the gallery interface and customization options.
+
+## Author
+
+**Hiba Ben Adou**
+
+Computer Engineering Student – ENSA Tangier
+
+Interested in Artificial Intelligence, Machine Learning, Software Engineering and Data-Driven Applications.
+
+## Project Context
+
+Academic project developed to explore creative computing, web development and Python-based data processing.
