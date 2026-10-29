@@ -1,0 +1,18 @@
+# Core Flask framework
+Flask==3.0.3
+Werkzeug==3.0.3
+
+# Data processing and visualization (Python 3.13 compatible)
+numpy==2.1.0
+pandas==2.2.3
+matplotlib==3.9.2
+
+# Image processing
+Pillow==10.4.0
+
+# Audio processing
+pydub==0.25.1
+audioop-lts; python_version>='3.13'
+
+# Environment variable management
+python-dotenv==1.0.1
